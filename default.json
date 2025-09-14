@@ -1,0 +1,44 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":automergePr",
+    "docker:enableMajor"
+  ],
+  "timezone": "Europe/Warsaw",
+  "schedule": [
+    "* 10-16 1-7 * 6"
+  ],
+  "configMigration": true,
+  "rebaseWhen": "conflicted",
+  "prConcurrentLimit": 0,
+  "labels": ["renovate"],
+  "argocd": {
+    "fileMatch": [
+      "\\.yaml$"
+    ]
+  },
+  "kubernetes": {
+    "fileMatch": [
+      "\\.yaml$"
+    ]
+  },
+  "packageRules": [
+    {
+      "description": "Group GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Group packages from same vendor/organization",
+      "matchPackagePatterns": ["^@.*"],
+      "groupName": "{{groupSlug}}"
+    },
+    {
+      "description": "Group Docker images from same registry",
+      "matchManagers": ["docker-compose", "dockerfile"],
+      "matchPackagePatterns": ["^([^/]+)/"],
+      "groupName": "{{groupSlug}} Docker images"
+    }
+  ]
+}
