@@ -5,6 +5,13 @@
     ":automergePr",
     "docker:enableMajor",
     "group:allNonMajor",
+    "group:aws-cdkMonorepo",
+    "group:aws-sdk-client-mockMonorepo",
+    "group:aws-sdk-goMonorepo",
+    "group:aws-sdk-go-v2Monorepo",
+    "group:tailwindcssMonorepo",
+    "group:radix-ui-primitivesMonorepo",
+    "group:ai-sdkMonorepo",
     "group:recommended"
   ],
   "timezone": "Europe/Warsaw",
@@ -14,7 +21,9 @@
   "configMigration": true,
   "rebaseWhen": "conflicted",
   "prConcurrentLimit": 0,
-  "labels": ["renovate"],
+  "labels": [
+    "renovate"
+  ],
   "argocd": {
     "fileMatch": [
       "\\.yaml$"
@@ -27,9 +36,12 @@
   },
   "packageRules": [
     {
-      "description": "Group all packages from same monorepo/organization",
-      "matchSourceUrls": ["**"],
-      "groupName": "{{groupName}}"
+      "description": "Group ai-sdk packages",
+      "matchPackagePatterns": [
+        "^@ai-sdk/",
+        "^@ai"
+      ],
+      "groupName": "ai-sdk packages"
     }
   ]
 }
