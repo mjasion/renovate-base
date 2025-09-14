@@ -3,7 +3,9 @@
   "extends": [
     "config:recommended",
     ":automergePr",
-    "docker:enableMajor"
+    "docker:enableMajor",
+    "group:monorepos",
+    "group:recommended"
   ],
   "timezone": "Europe/Warsaw",
   "schedule": [
@@ -25,20 +27,9 @@
   },
   "packageRules": [
     {
-      "description": "Group GitHub Actions updates",
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions"
-    },
-    {
-      "description": "Group packages from same vendor/organization",
-      "matchPackagePatterns": ["^@([^/]+)/"],
-      "groupName": "{{groupSlug}} packages"
-    },
-    {
-      "description": "Group Docker images from same registry",
-      "matchManagers": ["docker-compose", "dockerfile"],
-      "matchPackagePatterns": ["^([^/]+)/"],
-      "groupName": "{{groupSlug}} Docker images"
+      "description": "Group all packages from same monorepo/organization",
+      "matchSourceUrls": ["**"],
+      "groupName": "{{groupName}}"
     }
   ]
 }
