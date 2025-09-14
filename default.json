@@ -31,8 +31,8 @@
     },
     {
       "description": "Group packages from same vendor/organization",
-      "matchPackagePatterns": ["^@.*"],
-      "groupName": "{{groupSlug}}"
+      "matchPackagePatterns": ["^@([^/]+)/"],
+      "groupName": "{{groupSlug}} packages"
     },
     {
       "description": "Group Docker images from same registry",
