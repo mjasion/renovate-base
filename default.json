@@ -11,7 +11,6 @@
     "group:aws-sdk-go-v2Monorepo",
     "group:tailwindcssMonorepo",
     "group:radix-ui-primitivesMonorepo",
-    "group:ai-sdkMonorepo",
     "group:recommended"
   ],
   "timezone": "Europe/Warsaw",
