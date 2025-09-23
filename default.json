@@ -20,6 +20,7 @@
   "configMigration": true,
   "rebaseWhen": "conflicted",
   "prConcurrentLimit": 0,
+  "prHourlyLimit": 2,
   "labels": [
     "renovate"
   ],
