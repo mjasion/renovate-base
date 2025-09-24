@@ -15,10 +15,9 @@
   ],
   "timezone": "Europe/Warsaw",
   "schedule": [
-    "* 10-16 1-7 * 6"
+    "* 10-16 * * 1-5"
   ],
   "configMigration": true,
-  "rebaseWhen": "conflicted",
   "prConcurrentLimit": 0,
   "prHourlyLimit": 2,
   "labels": [
