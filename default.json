@@ -4,6 +4,7 @@
     "config:recommended",
     ":automergePr",
     "docker:enableMajor",
+    "group:allNonMajor",
     "group:aws-cdkMonorepo",
     "group:aws-sdk-client-mockMonorepo",
     "group:aws-sdk-goMonorepo",
