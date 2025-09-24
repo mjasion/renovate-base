@@ -19,7 +19,7 @@
   ],
   "configMigration": true,
   "prConcurrentLimit": 0,
-  "prHourlyLimit": 2,
+  "prHourlyLimit": 0,
   "labels": [
     "renovate"
   ],
