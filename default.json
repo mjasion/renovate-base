@@ -17,6 +17,8 @@
   "schedule": [
     "* 10-16 * * 1-5"
   ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
   "configMigration": true,
   "rebaseWhen": "conflicted",
   "labels": [
