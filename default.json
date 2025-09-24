@@ -51,6 +51,13 @@
         "^@ai-sdk/",
         "^@ai"
       ]
+    },
+    {
+      "description": "Group Arcjet packages",
+      "groupName": "arcjet packages",
+      "matchPackagePatterns": [
+        "^@arcjet/"
+      ]
     }
   ]
 }
