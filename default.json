@@ -4,7 +4,7 @@
     "config:recommended",
     ":automergePr",
     "docker:enableMajor",
-    "group:allNonMajor",
+    "group:allDigest",
     "group:aws-cdkMonorepo",
     "group:aws-sdk-client-mockMonorepo",
     "group:aws-sdk-goMonorepo",
@@ -35,12 +35,22 @@
   },
   "packageRules": [
     {
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch",
+      "matchPackageNames": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
       "description": "Group ai-sdk packages",
+      "groupName": "ai-sdk packages",
       "matchPackagePatterns": [
         "^@ai-sdk/",
         "^@ai"
-      ],
-      "groupName": "ai-sdk packages"
+      ]
     }
   ]
 }
