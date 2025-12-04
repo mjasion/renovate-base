@@ -33,6 +33,22 @@
   },
   "packageRules": [
     {
+      "description": "Critical security updates (patch) - immediate automerge",
+      "matchUpdateTypes": ["patch"],
+      "matchDatasources": ["*"],
+      "vulnerabilityAlerts": {
+        "enabled": true
+      },
+      "prPriority": 10,
+      "groupName": null,
+      "schedule": null,
+      "separateMinorPatch": false,
+      "separateMajorMinor": false,
+      "automerge": true,
+      "automergeType": "pr",
+      "labels": ["security", "automerge", "renovate"]
+    },
+    {
       "groupName": "all patch dependencies",
       "groupSlug": "all-patch",
       "matchPackageNames": [
