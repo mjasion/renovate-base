@@ -82,6 +82,12 @@
       "matchPackagePatterns": [
         "^@arcjet"
       ]
+    },
+    {
+      "matchPackagePatterns": ["^@lucide/", "^lucide-"],
+      "groupName": "lucide",
+      "minimumReleaseAge": "0 days",
+      "schedule": ["at any time"]
     }
   ]
 }
