@@ -83,35 +83,5 @@
       "matchPackagePatterns": [
         "^@arcjet"
       ]
-    },
-    {
-      "matchPackagePatterns": ["^@lucide/", "^lucide-"],
-      "groupName": "lucide",
-      "minimumReleaseAge": "0 days",
-      "schedule": ["at any time"]
-    },
-    {
-      description: "Group ESLint ecosystem updates into one PR",
-      groupName: "eslint",
-      matchPackageNames: [
-        "eslint",
-        "@eslint/js",
-        "typescript-eslint",
-        "eslint-plugin-react",
-        "eslint-plugin-react-hooks",
-      ],
-    },
-    {
-      description: "Group BlockNote updates into one PR",
-      groupName: "blocknote",
-      matchPackageNames: ["/^@blocknote//"],
-    },
-    {
-      description: "Always bump Lucide icons to latest version",
-      groupName: "lucide",
-      matchPackageNames: ["/^lucide/"],
-      rangeStrategy: "replace",
     }
-    
-  ]
 }
