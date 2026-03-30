@@ -111,12 +111,7 @@
       groupName: "lucide",
       matchPackageNames: ["/^lucide/"],
       rangeStrategy: "replace",
-    },
-    {
-      description: "Security updates - high priority",
-      matchDatasources: ["npm"],
-      isVulnerabilityAlert: true,
-      prPriority: 10,
-    },
+    }
+    
   ]
 }
