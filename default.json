@@ -67,6 +67,7 @@
       "matchUpdateTypes": [
         "patch"
       ]
+      schedule: ["on saturday and sunday"],
     },
     {
       "description": "Group ai-sdk packages",
@@ -88,6 +89,34 @@
       "groupName": "lucide",
       "minimumReleaseAge": "0 days",
       "schedule": ["at any time"]
-    }
+    },
+    {
+      description: "Group ESLint ecosystem updates into one PR",
+      groupName: "eslint",
+      matchPackageNames: [
+        "eslint",
+        "@eslint/js",
+        "typescript-eslint",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+      ],
+    },
+    {
+      description: "Group BlockNote updates into one PR",
+      groupName: "blocknote",
+      matchPackageNames: ["/^@blocknote//"],
+    },
+    {
+      description: "Always bump Lucide icons to latest version",
+      groupName: "lucide",
+      matchPackageNames: ["/^lucide/"],
+      rangeStrategy: "replace",
+    },
+    {
+      description: "Security updates - high priority",
+      matchDatasources: ["npm"],
+      isVulnerabilityAlert: true,
+      prPriority: 10,
+    },
   ]
 }
