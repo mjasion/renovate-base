@@ -67,7 +67,7 @@
       "matchUpdateTypes": [
         "patch"
       ]
-      schedule: ["on saturday and sunday"],
+      schedule: ["on saturday and sunday"]
     },
     {
       "description": "Group ai-sdk packages",
